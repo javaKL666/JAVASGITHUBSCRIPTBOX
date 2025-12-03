@@ -216,13 +216,13 @@ local MelonFE = win:Tab("MelonFE","7733779610") -- 左侧边栏分类
 local hitbox = win:Tab("范围","7733779610") -- 左侧边栏分类
 local PictureToLightShadow = win:Tab("画质与光影","7733992604") -- 左侧边栏分类
 local PlayerRotation = win:Tab("人物旋转","7733779610") -- 左侧边栏分类
+local JoinServer = win:Tab("加入服务器","7733992604") -- 左侧边栏分类
 local Robux = win:Tab("Robux","7733992604") -- 左侧边栏分类
 local hack = win:Tab("黑客","7733992604") -- 左侧边栏分类
 local Kid = win:Tab("儿子","7733992604") -- 左侧边栏分类
 local Time = win:Tab("时间","7733992604") -- 左侧边栏分类
 local BackDoor = win:Tab("后门","7733992604") -- 左侧边栏分类
-local InfiniteyieldText = win:Tab("指令","7733992604") -- 左侧边栏分类
-local MindTools = win:Tab("念力","7733992604") -- 左侧边栏分类
+local InfiniteyieldCommand = win:Tab("指令","7733992604") -- 左侧边栏分类
 local Executant = win:Tab("注入器","7733992604") -- 左侧边栏分类
 
 -- =======<游戏列表>=======
@@ -4654,13 +4654,13 @@ about:Button("CET",function() -- （单点类）
 end)
 
 
-local about = InfiniteyieldText:section("Infinite yield",true)
+local about = InfiniteyieldCommand:section("Infinite yield",true)
 
 about:Button("Infinite yield",function() -- （单点类）
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
 end)
 
-local about = InfiniteyieldText:section("命令",true)
+local about = InfiniteyieldCommand:section("命令",true)
 
 about:Label("Rspy : 游戏抓包")
 about:Label("Console : 后台")
@@ -4698,23 +4698,6 @@ about:Label("Trip : 摔倒")
 about:Label("AntiKick : 防踢")
 about:Label("Lay : 躺下")
 about:Label("GoTo [用户名] : 玩家传送")
-
-local about = MindTools:section("念力工具",true)
-
-about:Button("获取念力工具", function()
-  loadstring(game:HttpGet("https://pastebin.com/raw/ZhTimW1H"))()
-end)
-
-local about = MindTools:section("命令",true)
-
-about:Label("Q - 靠近")
-about:Label("E - 离远")
-about:Label("Y - 投掷")
-about:Label("J - 超级投掷")
-about:Label("U - 使物体自转")
-about:Label("P - 使物体悬浮在空中")
-about:Label("X - 走得更远一点")
-about:Label("L - 使方块变直并锁定在前部")
 
 local about = Executant:section("注入器",true)
 
@@ -5368,13 +5351,89 @@ task.spawn(function()
     end
   end)
   
+local about = JoinServer:section("服务器",true) -- 分类内功能分类
+
+about:Button("加入自然灾害",function() -- （单点类）
+local game_id = 65241
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入最坚强战场",function() -- （单点类）
+local game_id = 3808081382
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入刀刃球",function() -- （单点类）
+local game_id = 4777817887
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入忍者传奇",function() -- （单点类）
+local game_id = 1335695570
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入极速传奇",function() -- （单点类）
+local game_id = 1119466531
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入力量传奇",function() -- （单点类）
+local game_id = 1268927906
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入传奇战场",function() -- （单点类）
+local game_id = 5265857965
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入传奇塔防",function() -- （单点类）
+local game_id = 8287505028
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入Blox Loot",function() -- （单点类）
+local game_id = 8181828018
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+about:Button("加入森林中的99夜",function() -- （单点类）
+local game_id = 7326934954
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+end)
+
+local about = JoinServe:section("脚本测试服务器",true) -- 分类内功能分类
+
+about:Button("加入绿色底板",function() -- （单点类）
+local game_id = 6965006845
+local game_url = "https://www.roblox.com/games/"..game_id
+game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end)
+
+about:Button("加入围栏",function() -- （单点类）
+local game_id = 8226497
+local game_url = "https://www.roblox.com/games/"..game_id
+ game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+end)
+  
 local about = NaturalDisasterSurvival:section("自然灾害",true)
 
 about:Toggle("自动胜利", "ToggleInfo", false, function(bool)
     _G.autowinfarm = bool;
     while wait(.1) do
         if _G.autowinfarm == true then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.636871, 184.856384, 289.357117, 0.404673904, 0.264516145, -0.875368714, 0, 0.957250953, 0.289259046, 0.914461076, -0.117055587, 0.387374461)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-285.239502, 185.332703, 347.289581, 0.768330932, 0.4829759, -0.420002222, 0, 0.656199336, 0.754587591, 0.640052795, -0.579773009, 0.504178226)
         end
 end
 end)
@@ -5393,7 +5452,7 @@ about:Toggle("在水上行走", "ToggleInfo", false, function(bool)
                             game.Workspace.WaterLevel.Size = Vector3.new(10, 1, 10)
                         end
                     end
-                    if bool == true then do game.Workspace.WaterLevel.CanCollide = true  -- 修复了此处的多余符号
+                    if bool == true then do game.Workspace.WaterLevel.CanCollide = true 
                             game.Workspace.WaterLevel.Size = Vector3.new(5000, 1, 5000)
                         end
                     end
@@ -5598,11 +5657,11 @@ end)
 local about = NaturalDisasterSurvival:section("传送", true)
 
 about:Button("地图",function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-154.975586, 54.7944374, 1.12223959, -0.0905113071, 0.450444311, -0.888204753, 0, 0.891865492, 0.452300817, 0.995895386, 0.0409383364, -0.0807239115)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-68.1344452, 53.1492348, -7.29726553, -0.813139081, -0.186660677, 0.551328003, 0, 0.947185993, 0.320684612, -0.582069337, 0.260761201, -0.770194054)
 end)
 
 about:Button("赏台",function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-239.811447, 217.10582, 363.684601, -0.461886197, 0.03726542, -0.886155963, 0, 0.999116957, 0.04201575, 0.886939287, 0.0194064956, -0.461478293)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-285.239502, 185.332703, 347.289581, 0.768330932, 0.4829759, -0.420002222, 0, 0.656199336, 0.754587591, 0.640052795, -0.579773009, 0.504178226)
 end)
 
 about:Button("秘密基地",function() -- （单点类）
