@@ -122,7 +122,7 @@ function library.new(library, name,theme)
         end
       end
 -------------------------AL------------------------------
-ALTransparency = 1
+ALTransparency = 0.6
 ALcolor = Color3.fromRGB(0,255,127)
 -------------------------AL------------------------------
 if theme == 'dark' then
@@ -216,7 +216,7 @@ end
       DropShadow.BackgroundTransparency = 1.000
       DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
       DropShadow.Size = UDim2.new(1, 10, 1, 10)
-      DropShadow.Image = "rbxassetid://133505315200130" --背景
+      DropShadow.Image = "rbxassetid://87681306222781" --背景
       DropShadow.ImageColor3 = Color3.fromRGB(255,255,255)
       DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
@@ -484,7 +484,7 @@ UIG.Parent = Open
         TabIco.BackgroundTransparency = 1.000
         TabIco.BorderSizePixel = 0
         TabIco.Size = UDim2.new(0, 24, 0, 24)
-        TabIco.Image = "rbxassetid://7733765398" or icon and "rbxassetid://"..icon
+        TabIco.Image = "rbxassetid://113414340919669" or icon and "rbxassetid://"..icon
         TabIco.ImageTransparency = 0.2
         
         TabText.Name = "TabText"
@@ -843,7 +843,7 @@ UIG.Parent = Open
             KeybindValue.Position = UDim2.new(0.763033211, 0, 0.289473683, 0)
             KeybindValue.Size = UDim2.new(0, 100, 0, 28)
             KeybindValue.AutoButtonColor = false
-            KeybindValue.Font = Enum.Font.GothamSemibold
+            KeybindValue.Font = Enum.Font.Gotham
             KeybindValue.Text = keyTxt
             KeybindValue.TextColor3 = Color3.fromRGB(139, 0, 255)
             KeybindValue.TextSize = 14.000
@@ -1270,7 +1270,7 @@ UIG.Parent = Open
             DropdownOpen.BorderSizePixel = 0
             DropdownOpen.Position = UDim2.new(0.918383181, 0, 0.5, 0)
             DropdownOpen.Size = UDim2.new(0, 20, 0, 20)
-            DropdownOpen.Font = Enum.Font.GothamSemibold
+            DropdownOpen.Font = Enum.Font.Gotham
             DropdownOpen.Text = "+"
             DropdownOpen.TextColor3 = ALcolor
             DropdownOpen.TextSize = 24.000
