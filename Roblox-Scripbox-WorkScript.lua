@@ -175,20 +175,7 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
         
 -- =======<加载ui库>=======
-local success, ui = pcall(function()
-return loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/JAVASGITHUBSCRIPTBOX/refs/heads/main/Roblox-Github-Work-Script-ui.lua"))()
-end)
-if not success then
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "工脚本",
-    Text = "ui库加载失败",
-    Duration = 5, --过时间
-    Icon = "rbxassetid://131499184387795",
-    Button1 = "等待修复",
-})
-return
-end
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/JAVASGITHUBSCRIPTBOX/refs/heads/main/Roblox-Github-Work-Script-ui.lua"))()
 local win = ui:new("工脚本")
 
 -- =======<播放音效-旧音效>=======
