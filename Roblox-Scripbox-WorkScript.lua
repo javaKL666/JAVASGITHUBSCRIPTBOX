@@ -5622,10 +5622,6 @@ about:Button("超级环 v6",function() -- （单点类）
     loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/Super-ring-Script/refs/heads/main/Super-Ring-V6.lua"))()
 end)
 
-about:Button("双环控制 v1",function() -- （单点类）
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/Super-ring-Script/refs/heads/main/Double-Ring-V1.lua"))()
-end)
-
 about:Button("磁铁环 v2",function() -- （单点类）
     loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/Super-ring-Script/refs/heads/main/Magnet-Ring-V2.lua"))()
 end)
