@@ -216,7 +216,7 @@ local MelonFE = win:Tab("MelonFE","7733779610") -- 左侧边栏分类
 local hitbox = win:Tab("范围","7733779610") -- 左侧边栏分类
 local PictureToLightShadow = win:Tab("画质与光影","7733992604") -- 左侧边栏分类
 local PlayerRotation = win:Tab("人物旋转","7733779610") -- 左侧边栏分类
-local JoinServer = win:Tab("加入服务器","7733992604") -- 左侧边栏分类
+local SuperRing = win:Tab("黑洞","7733992604") -- 左侧边栏分类
 local Robux = win:Tab("Robux","7733992604") -- 左侧边栏分类
 local hack = win:Tab("黑客","7733992604") -- 左侧边栏分类
 local Kid = win:Tab("儿子","7733992604") -- 左侧边栏分类
@@ -231,6 +231,7 @@ local NaturalDisasterSurvival = win:Tab("自然灾害","7733992604") -- 左侧�
 
 local about = Information:section("信息类",true) -- 分类内功能分类
 
+about("当前时间: " .. os.date("%H:%M:%S"))
 about:Label("您的注入器:" ..identifyexecutor())
 print("注入器: "..identifyexecutor())
 about:Label("您的用户名:" .. game.Players.LocalPlayer.Name .. " ")
@@ -5351,83 +5352,17 @@ task.spawn(function()
     end
   end)
   
-local about = JoinServer:section("服务器",true) -- 分类内功能分类
+local about = SuperRing:section("黑洞",true) -- 分类内功能分类
 
-about:Button("加入自然灾害",function() -- （单点类）
-local game_id = 65241
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+about:Button("Super ring v1",function() -- （单点类）
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/Super-ring-Script/refs/heads/main/Super-Ring-V1.lua"))()   
 end)
 
-about:Button("加入最坚强战场",function() -- （单点类）
-local game_id = 3808081382
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
+about:Button("Super ring v3",function() -- （单点类）
+    
 end)
 
-about:Button("加入刀刃球",function() -- （单点类）
-local game_id = 4777817887
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入忍者传奇",function() -- （单点类）
-local game_id = 1335695570
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入极速传奇",function() -- （单点类）
-local game_id = 1119466531
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入力量传奇",function() -- （单点类）
-local game_id = 1268927906
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入传奇战场",function() -- （单点类）
-local game_id = 5265857965
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入传奇塔防",function() -- （单点类）
-local game_id = 8287505028
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入Blox Loot",function() -- （单点类）
-local game_id = 8181828018
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-about:Button("加入森林中的99夜",function() -- （单点类）
-local game_id = 7326934954
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)    
-end)
-
-local about = JoinServe:section("脚本测试服务器",true) -- 分类内功能分类
-
-about:Button("加入绿色底板",function() -- （单点类）
-local game_id = 6965006845
-local game_url = "https://www.roblox.com/games/"..game_id
-game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
-
-about:Button("加入围栏",function() -- （单点类）
-local game_id = 8226497
-local game_url = "https://www.roblox.com/games/"..game_id
- game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
-end)
-  
-local about = NaturalDisasterSurvival:section("自然灾害",true)
+local about = NaturalDisasterSurvival:section("自然灾害",true) -- 分类内功能分类
 
 about:Toggle("自动胜利", "ToggleInfo", false, function(bool)
     _G.autowinfarm = bool;
