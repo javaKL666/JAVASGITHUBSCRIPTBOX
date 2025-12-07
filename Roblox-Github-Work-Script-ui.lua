@@ -555,13 +555,13 @@ UIG.Parent = Open
           
           SectionText.Name = "SectionText"
           SectionText.Parent = Section
-          SectionText.BackgroundColor3 = Color3.fromRGB(139, 0, 255)
+          SectionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
           SectionText.BackgroundTransparency = 1.000
           SectionText.Position = UDim2.new(0.0887396261, 0, 0, 0)
           SectionText.Size = UDim2.new(0, 401, 0, 36)
           SectionText.Font = Enum.Font.GothamSemibold
           SectionText.Text = name
-          SectionText.TextColor3 = ALcolor
+          SectionText.TextColor3 = Color3.fromRGB(255, 255, 255)
           SectionText.TextSize = 16.000
           SectionText.TextXAlignment = Enum.TextXAlignment.Left
           
