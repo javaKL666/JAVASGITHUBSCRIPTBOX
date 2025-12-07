@@ -484,7 +484,7 @@ UIG.Parent = Open
         TabIco.BackgroundTransparency = 1.000
         TabIco.BorderSizePixel = 0
         TabIco.Size = UDim2.new(0, 24, 0, 24)
-        TabIco.Image = "rbxassetid://7733765398" or icon and "rbxassetid://7733765398"..icon --Tab选项贴花
+        TabIco.Image = ("rbxassetid://%s"):format((icon or 4370341699)) 
         TabIco.ImageTransparency = 0.2
         
         TabText.Name = "TabText"

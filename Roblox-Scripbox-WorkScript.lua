@@ -792,7 +792,10 @@ about:Toggle("无敌", "LSTM", false, function(Value)
     end
 end)
 
-about:Dropdown("镜头", "Dropdown",{"第一人称","第三人称"}, function(camera)
+about:Dropdown("镜头", "Dropdown",{
+     "第一人称",
+     "第三人称"
+}, function(camera)
 if camera == "第三人称" then
     game.Players.LocalPlayer.CameraMaxZoomDistance = 50
     game.Players.LocalPlayer.CameraMode = Enum.CameraMode.Classic
@@ -924,10 +927,6 @@ if Value then
       end
     end
   end
-end)
- 
-about:Button("踢人 (娱乐)",function() -- （单点类）
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/c8320f69b6aa4f5d.txt_2024-08-08_214628.OTed.lua"))()
 end)
 
 about:Button("爬墙",function() -- （单点类）
@@ -1146,32 +1145,6 @@ about:Toggle("杀戮光环", "Toggle", false, function(enabled)
     end
     table.clear(connections)
     Run = false
-  end
-end)
-
-about:Toggle("人物隐身", "Invisible Character", false, function(enabled)
-  
-  local localPlayer = game.Players.LocalPlayer
-  for _, child in pairs((localPlayer.Character or localPlayer.CharacterAdded:Wait()):GetChildren()) do
-    local isBasePart = child:IsA("BasePart")
-    if isBasePart then
-      if enabled then
-        isBasePart = 1
-      else
-        isBasePart = 0
-      end
-      child.Transparency = isBasePart
-      child.CanCollide = not enabled
-    elseif child:IsA("Accessory") then
-      local handle = child.Handle
-      local transparency = nil	
-      if enabled then
-        transparency = 1
-      else
-        transparency = 0
-      end
-      handle.Transparency = transparency
-    end
   end
 end)
        
@@ -1447,6 +1420,29 @@ about:Toggle("Circle ESP", "ESP", false, function(state)
 
 local about = music:section("正常🤓",true) -- 分类内功能分类
 
+about:Dropdown("复制", "Dropdown",{
+    "防空警报",
+    "义勇军进行曲",
+    "彩虹瀑布",
+    "雨中牛郎",
+    "布吉岛",
+    "起风了DJ"
+}, function(CopyMusicId)
+if CopyMusicId == "防空警报" then
+setclipboard("792323017")
+elseif CopyMusicId == "义勇军进行曲" then
+setclipboard("1845918434")
+elseif CopyMusicId == "彩虹瀑布" then
+setclipboard("1837879082")
+elseif CopyMusicId == "雨中牛郎" then
+setclipboard("16831108393")
+elseif CopyMusicId == "布吉岛" then
+setclipboard("1838111377")
+elseif CopyMusicId == "起风了DJ" then
+setclipboard("99498025749186")
+     end
+end)
+
 about:Button("防空警报",function() -- （单点类）
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://792323017"
@@ -1512,19 +1508,7 @@ CoreGui:SetCore("SendNotification", {
     Icon = "rbxassetid://131499184387795"
 })
 end)
-about:Button("超人之曲",function() -- （单点类）
-    local sound = Instance.new("Sound")
-    sound.SoundId = "rbxassetid://122111289213283"
-    sound.Parent = game.Workspace
-    sound:Play()
-    local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "工脚本",
-    Text = "你为你播放",
-    Duration = 5, --过时间
-    Icon = "rbxassetid://131499184387795"
-})
-end)
+
 about:Button("起风了DJ",function() -- （单点类）
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://99498025749186"
@@ -1540,6 +1524,26 @@ CoreGui:SetCore("SendNotification", {
 end)
 local about = music:section("猎奇😨",true) -- 分类内功能分类
 
+about:Dropdown("复制", "Dropdown",{
+    "猴叫",
+    "笑死",
+    "米老鼠",
+    "齐天大圣",
+    "压力"   
+}, function(CopyMusicId)
+if CopyMusicId == "猴叫" then
+setclipboard("7196237097")
+elseif CopyMusicId == "笑死" then
+setclipboard("4857572997")
+elseif CopyMusicId == "米老鼠" then
+setclipboard("8491769438")
+elseif CopyMusicId == "齐天大圣" then
+setclipboard("8195914641")
+elseif CopyMusicId == "压力" then
+setclipboard("74856563303589")
+    end
+end)
+
 about:Button("猴叫",function() -- （单点类）
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://7196237097"
@@ -1553,6 +1557,7 @@ CoreGui:SetCore("SendNotification", {
     Icon = "rbxassetid://131499184387795"
 })
 end)
+
 about:Button("笑死",function() -- （单点类）
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://4857572997"
@@ -1608,6 +1613,32 @@ end)
 
 local about = music:section("恐怖😱",true) -- 分类内功能分类
 
+about:Dropdown("复制", "Dropdown",{
+    "串稀(全损音质)",
+    "窜稀",
+    "钢管掉落(全损音质)",
+    "钢管掉落",
+    "骂人",
+    "你他妈劈我瓜是吧",
+    "苹果闹钟"
+}, function(CopyMusicId)
+if CopyMusicId == "串稀(全损音质)" then
+setclipboard("6445594239")
+elseif CopyMusicId == "串稀" then
+setclipboard("4809574295")
+elseif CopyMusicId == "钢管掉落(全损音质)" then
+setclipboard("6729922069")
+elseif CopyMusicId == "钢管掉落" then
+setclipboard("6011094380")
+elseif CopyMusicId == "骂人" then
+setclipboard("7334239757")
+elseif CopyMusicId == "你他妈劈我瓜是吧" then
+setclipboard("7309604510")
+elseif CopyMusicId == "苹果闹钟" then
+setclipboard("4203251375")
+    end
+end)
+
 about:Button("串稀(全损音质)",function() -- （单点类）
      local sound = Instance.new("Sound") 
      sound.SoundId = "rbxassetid://6445594239" 
@@ -1636,7 +1667,7 @@ CoreGui:SetCore("SendNotification", {
 })
 end)
 
-about:Button("钢管落地 (全损音质)",function() -- （单点类）
+about:Button("钢管落地(全损音质)",function() -- （单点类）
 local sound = Instance.new("Sound") 
      sound.SoundId = "rbxassetid://6729922069" 
      sound.Parent = game.Workspace 
@@ -3563,7 +3594,7 @@ local function refreshPlayers()
     if playerDropdown then
         playerDropdown:Destroy()
     end
-    playerDropdown = about:Dropdown("选择玩家的名称", "Dropdown", playerList, function(selected)
+    playerDropdown = about:Dropdown("玩家的名称", "Dropdown", playerList, function(selected)
         selectedPlayer = game.Players:FindFirstChild(selected)
     end)
 end
@@ -4541,10 +4572,6 @@ about:Button("阿尔宙斯V3", function()
   loadstring(game:HttpGet([[https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3]]))()
 end)
 
-about:Button("水滴注入器", function()
-  loadstring(game:HttpGet([[https://raw.githubusercontent.com/crceck123/roblox-script/main/hydrogen_skin_for_evon.lua]]))()
-end)
-
 about:Button("Codex",function() -- （单点类）
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Solary-3/Scripts/refs/heads/main/Codex.lua"))()
 end)
@@ -4596,7 +4623,6 @@ local CountDown25 = about:Label("26")
 local CountDown27 = about:Label("28")
 local CountDown28 = about:Label("29")
 local CountDown29 = about:Label("30")
-local CountDown30 = about:Label("31")
 
 task.spawn(function()
   
@@ -5165,35 +5191,15 @@ task.spawn(function()
       local CountTime29 = os.time({
         year = 2026,
         month = 10,
-        day = 1,
-        hour = 0,
-        min = 0,
-        sec = 0,
-      }) - os.time()
-      if CountTime29 > 0 then
-        CountDown29.Text = string.format("国庆节倒计时: %d天%d小时%d分钟%d秒", math.floor(CountTime29 / 86400), math.floor(CountTime29 % 86400 / 3600), math.floor(CountTime29 % 3600 / 60), CountTime29 % 60)
-      else
-        CountDown29.Text = "国庆节啦！！！"
-      end
-      wait(1)
-    end
-  end)
-  
-  task.spawn(function()
- 
-    while true do
-      local CountTime30 = os.time({
-        year = 2026,
-        month = 10,
         day = 10,
         hour = 0,
         min = 0,
         sec = 0,
       }) - os.time()
-      if CountTime30 > 0 then
-        CountDown30.Text = string.format("辛亥革命纪念日倒计时: %d天%d小时%d分钟%d秒", math.floor(CountTime30 / 86400), math.floor(CountTime30 % 86400 / 3600), math.floor(CountTime30 % 3600 / 60), CountTime30 % 60)
+      if CountTime29 > 0 then
+        CountDown29.Text = string.format("辛亥革命纪念日倒计时: %d天%d小时%d分钟%d秒", math.floor(CountTime29 / 86400), math.floor(CountTime29 % 86400 / 3600), math.floor(CountTime29 % 3600 / 60), CountTime29 % 60)
       else
-        CountDown30.Text = "辛亥革命纪念日啦！！！"
+        CountDown29.Text = "辛亥革命纪念日啦！！！"
       end
       wait(1)
     end
