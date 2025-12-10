@@ -706,7 +706,7 @@ UIG.Parent = Open
             
             ToggleModule.Name = "ToggleModule"
             ToggleModule.Parent = Objs
-            ToggleModule.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+            ToggleModule.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             ToggleModule.BackgroundTransparency = 1.000
             ToggleModule.BorderSizePixel = 0
             ToggleModule.Position = UDim2.new(0, 0, 0, 0)
@@ -721,7 +721,7 @@ UIG.Parent = Open
             ToggleBtn.AutoButtonColor = false
             ToggleBtn.Font = Enum.Font.GothamSemibold
             ToggleBtn.Text = "   " .. text
-            ToggleBtn.TextColor3 = Color3.fromRGB(0, 0, 255)
+            ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             ToggleBtn.TextSize = 16.000
             ToggleBtn.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -1095,7 +1095,7 @@ UIG.Parent = Open
             MinSlider.Size = UDim2.new(0, 20, 0, 20)
             MinSlider.Font = Enum.Font.Gotham
             MinSlider.Text = "-"
-            MinSlider.TextColor3 = ALcolor
+            MinSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
             MinSlider.TextSize = 24.000
             MinSlider.TextWrapped = true
             
@@ -1109,7 +1109,7 @@ UIG.Parent = Open
             AddSlider.Size = UDim2.new(0, 20, 0, 20)
             AddSlider.Font = Enum.Font.Gotham
             AddSlider.Text = "+"
-            AddSlider.TextColor3 = ALcolor
+            AddSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
             AddSlider.TextSize = 24.000
             AddSlider.TextWrapped = true
             
