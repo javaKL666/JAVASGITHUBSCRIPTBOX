@@ -1,6 +1,6 @@
 -- =======<Kick>=======  
 local bannedlist = {
-      "pro_xx863",  -- BS黑洞中心作者
+      "pro_xx863",  
       },
  game:GetService("Players").PlayerAdded:Connect(function(player)
       for i, v in pairs(bannedlist) do 
@@ -12,7 +12,6 @@ local bannedlist = {
     
 -- =======<自动发送消息>=======   
 local TextChatService = game:GetService("TextChatService") local ReplicatedStorage = game:GetService("ReplicatedStorage") local function SendChatMessage(message) if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then local textChannel = TextChatService.TextChannels.RBXGeneral textChannel:SendAsync(message) else ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All") end end SendChatMessage("欢迎使用工脚本")
-
 
 -- =======<公告>=======
 
@@ -349,7 +348,7 @@ local Sound = Instance.new("Sound")
       Sound.Ended:Wait()
       Sound:Destroy()
 --]]
-NotifiCationLibrary:SendNotification("Success", "工脚本Bata1.2🟩", 5)
+NotifiCationLibrary:SendNotification("Success", "工脚本Bata2.4🟩", 5)
 
 -- =======<播放俄亥俄右侧通知>=======
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))() 
@@ -689,14 +688,14 @@ spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoi
 end)
 
 about:Slider('相机广角', 'Sliderflag', 70, 0 ,180, false, function(v)
-        game.Workspace.CurrentCamera.FieldOfView = v
+game.Workspace.CurrentCamera.FieldOfView = v
 end)
 
 about:Slider('玩家血量值', 'Sliderflag',  100, 0, 100,false, function(Value)
-    game.Players.LocalPlayer.Character.Humanoid.Health = Value
+game.Players.LocalPlayer.Character.Humanoid.Health = Value
 end)
 
-credits:Slider('玩家血量值上限', 'Sliderflag',  120, 120, 6000,false, function(Value)
+about:Slider('玩家血量值上限', 'Sliderflag',  120, 120, 6000,false, function(Value)
     game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Value
 end)
 
@@ -742,7 +741,7 @@ about:Toggle("开启快速跑步", "switch", false, function(enabled)
 end)
 
 about:Slider('高度', 'Slider', 2, 2, 9999,false, function(Value)
-    game.Players.LocalPlayer.Character.Humanoid.HipHeight = Value
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = Value
 end)
 
 about:Slider("玩家头部大小", "Head", 1, 0, 1000, false, function(headSize)
@@ -1447,6 +1446,7 @@ about:Button("防摔落伤害 (跟敌少侠飞行配合)",function()
 end)
 
 local about = Tube9178:section("刀子🐔吧",true) 
+
 about:Button("撸🐔吧r6",function() 
     loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
 end)
@@ -2152,7 +2152,7 @@ about:Toggle("预判自瞄", "开关", false, function(v)
 end)
 
 
-about:Toggle("优先瞄准血量低的玩家 (开/关)", "开关", false, function(v)
+about:Toggle("优先瞄准血量低的玩家", "开关", false, function(v)
     toggleLowHealthPriority(v)
 end)
 
@@ -3199,21 +3199,16 @@ about:Button("刷新列表", function()
 })
 end)
 
-about:Toggle("查看玩家", 'Toggleflag', false, function(state)
-    if state then
-        game:GetService('Workspace').CurrentCamera.CameraSubject =
-            game:GetService('Players'):FindFirstChild(playerDropdown).Character.Humanoid
-Notification:Notify(
-        {Title = "工脚本", Description = "已查看玩家"},
-        {OutlineColor = Color3.fromRGB(0, 0, 0),Time = 9, Type = "image"},
-        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(258, 58, 68)})
-    else
-Notification:Notify(
-        {Title = "工脚本", Description = "已停止查看玩家"},
-        {OutlineColor = Color3.fromRGB(0, 0, 0),Time = 9, Type = "image"},
-        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(258, 58, 68)})
-        local lp = game.Players.LocalPlayer
-        game:GetService('Workspace').CurrentCamera.CameraSubject = lp.Character.Humanoid
+about:Button("查看玩家", function()
+    if selectedPlayer then
+        game.Workspace.CurrentCamera.CameraSubject = selectedPlayer.Character.Humanoid
+    end
+end)
+
+about:Button("停止查看", function()
+    local localPlayer = game.Players.LocalPlayer
+    if localPlayer.Character and localPlayer.Character:FindFirstChild("Humanoid") then
+        game.Workspace.CurrentCamera.CameraSubject = localPlayer.Character.Humanoid
     end
 end)
 
@@ -4374,7 +4369,7 @@ task.spawn(function()
         sec = 0,
       }) - os.time()
       if CountTime9 > 0 then
-        CountDown9.Text = string.format("世界地球日倒计时: %d天%d小时%d分钟%d秒", math.floor(CountTime9 / 86400), math.floor(CountTime9 % 86400 / 3600), math.floor(CountTime9 % 3600 / 60), CountTime9 % 60)
+        CountDown9.Text = string.format("世界读书日倒计时: %d天%d小时%d分钟%d秒", math.floor(CountTime9 / 86400), math.floor(CountTime9 % 86400 / 3600), math.floor(CountTime9 % 3600 / 60), CountTime9 % 60)
       else
         CountDown9.Text = "世界读书日啦！！！"
       end
